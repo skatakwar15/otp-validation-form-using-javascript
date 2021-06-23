@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Verification</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="write">
+		Dear <b><span id="name"></span></b>, thank you for your inquiry. <br>A 4 digit verification number has been sent to your phone number: <b><span id="mobile"></span></b>, <br>please enter in the following box and submit your confirmation:
+	</div>
+
+	<div>
+		<label for="otp">Enter the OTP</label>
+		<input type="text" id="inputotp" name="inputotp" value="">
+		<span id="otp_error"></span>
+	</div>
+	<input type="submit" onclick="otpcheck()" value="Validate">
+	<span id="invalid"></span>
+	
+
+	<script type="text/javascript">
+		//pulling name and phone number from localStorage.
+		document.getElementById("name").innerHTML=localStorage.getItem("txtValue");
+		document.getElementById("mobile").innerHTML=localStorage.getItem("txtValue2");
+
+		//pulling generated otp from localStorage.
+		var generatedotp=localStorage.getItem("otp");
+		
+		alert("generated otp is: "+generatedotp);
+		document.write("correct otp for reference: "+generatedotp);
+		
+		//created a variable 'wrong' with value 3 to cap unsuccessfull otp input events to 3 attempts only.
+		var wrong=3;
+
+		function otpcheck()
+		{
+			//storing the entered otp in 'inputotp' variable.
+			var inputotp=document.getElementById("inputotp").value;
+			
+			//checking if generated otp matches the entered otp.
+			if (inputotp.match(generatedotp))
+			{
+				alert("Validation Successful! Redirecting...")
+				window.location.href="http://pixel6.co/";
+			}
+			else 
+			{
+				if(wrong==0)
+				{
+					//redirecting to 404 page because of 3 unsuccessfull otp input attempt.
+					window.location.href="http://pixel6.co/404";
+				}
+				else if(inputotp!=generatedotp)
+				{
+					wrong=wrong-1;
+					document.getElementById("invalid").innerHTML="invalid otp, only " +wrong+ " of 3 attempts left. Please re-enter correct otp.";
+					document.getElementById("inputotp").reset();
+
+				}
+			}
+		}
+		
+	</script>
+
+
+</body>
+</html>

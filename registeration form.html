@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		//nameFunc validates input for name of the user.
+		function nameFunc()
+		{
+			var name= document.getElementById("name").value;
+			localStorage.setItem("txtValue", name);//for use in verification page
+
+			var allowed_format = /^[a-zA-Z]+ [a-zA-Z]+$/;  // /^[a-zA-Z\s]+$/; //regex for accepting only [A-Z][a-z].
+			
+			if (name == "") 
+			{
+				alert("Name can’t be blank or empty !!!");
+			    return false;
+			}
+			if (name.length<4)
+			{
+				alert("Minimum 4 characters required");
+				return false;
+			}
+			if (name.match(allowed_format))
+			{
+				return true;	
+			}
+			else
+			{
+				alert("Only Alphabets allowed [A-Z][a-z] with firstname and lastname");
+				return false;
+			}
+		}
+		//emailFunc used for validating email input.
+		function emailFunc()//not working properly.
+		{
+			var email=document.getElementById("email").value;
+
+			if (email === "") 
+			{
+				alert("email can’t be blank or empty !!!");
+			    return false;
+			}
+			else
+			{
+				return true;
+			}
+
+		}
+
+		function phoneFunc() 
+		{
+			var inpField = document.getElementById("phone");
+			var inputno=document.getElementById("phone").value;//used it for creating substring to find operator and state.
+			localStorage.setItem("txtValue2", inputno);//for use in verification page.
+			var l = inpField.value.length;
+			var key = event.inputType;
+
+			//creating operator substring and saved it to localStorage.
+			var operator=inputno.substring(1, 4);
+			localStorage.setItem("operator", operator);
+
+			//creating state substring and saved it to localStorage.
+			var state=inputno.substring(6, 9);
+			localStorage.setItem("state", state);
+
+			  //checking the inputs to add the required pattern.
+			switch (l) {
+			  case 1:
+			    inpField.value = "(" + inpField.value;
+			    break
+			  case 4:
+			    inpField.value = inpField.value + ") ";
+			    break
+			  case 9:
+			    inpField.value = inpField.value + " - ";
+		        break
+	   		  case 17:
+		        // prevents user from typing more numbers than necessary:
+			    inpField.value = inpField.value.slice(0, l - 1);
+
+			}
+			
+			//Validating and finding correct Phone operator and printing them.
+			if(operator<=799 && operator>=621)
+			{
+				document.getElementById("phone_message").innerHTML="Reliance Jio";
+		
+			}
+			if(operator<=920 && operator>=801)
+			{
+				document.getElementById("phone_message").innerHTML="Idea";
+
+			}
+			if(operator<=999 && operator>=921)
+			{
+				document.getElementById("phone_message").innerHTML="Vodafone";
+			}
+
+			var t=0;//temp variable created for while loop.
+			while(t==0)
+			{
+				//validating and finding correct State and printing them
+				if(state<=27 && state>=0)
+				{
+					document.getElementById("statecode").innerHTML=" Andhra Pradesh";
+					t+=1;
+					continue;
+				}
+				if(state<=55 && state>=28)
+				{
+					document.getElementById("statecode").innerHTML=" Arunachal Pradesh";
+					t+=1;
+					continue;
+				}
+				if(state<=83 && state>=56)
+				{
+					document.getElementById("statecode").innerHTML=" Assam";
+					t+=1;
+					continue;
+				}
+				if(state<=111 && state>=84)
+				{
+					document.getElementById("statecode").innerHTML=" Bihar";
+					t+=1;
+					continue;
+				}
+				if(state<=139 && state>=112)
+				{
+					document.getElementById("statecode").innerHTML=" Chhattisgarh";
+					t+=1;
+					continue;
+				}
+				if(state<=167 && state>=140)
+				{
+					document.getElementById("statecode").innerHTML=" Goa";
+					t+=1;
+					continue;
+				}
+				if(state<=195 && state>=168)
+				{
+					document.getElementById("statecode").innerHTML=" Gujarat";
+					t+=1;
+					continue;
+				}
+				if(state<=223 && state>=196)
+				{
+					document.getElementById("statecode").innerHTML=" Haryana";
+					t+=1;
+					continue;
+				}
+				if(state<=251 && state>=224)
+				{
+					document.getElementById("statecode").innerHTML=" Himachal Pradesh";
+					t+=1;
+					continue;
+				}
+				if(state<=279 && state>=252)
+				{
+					document.getElementById("statecode").innerHTML=" Jharkhand";
+					t+=1;
+					continue;
+				}
+				if(state<=307 && state>=280)
+				{
+					document.getElementById("statecode").innerHTML=" Karnataka";
+					t+=1;
+					continue;
+				}
+				if(state<=335 && state>=308)
+				{
+					document.getElementById("statecode").innerHTML=" Kerala";
+					t+=1;
+					continue;
+
+				}
+				if(state<=363 && state>=336)
+				{
+					document.getElementById("statecode").innerHTML=" Madhya Pradesh";
+					t+=1;
+					continue;
+				}
+				if(state<=391 && state>=364)
+				{
+					document.getElementById("statecode").innerHTML=" Maharashtra";
+					continue;
+				}
+				if(state<=419 && state>=392)
+				{
+					document.getElementById("statecode").innerHTML=" Manipur";
+					t+=1;
+					continue;
+				}
+				if(state<=447 && state>=420)
+				{
+					document.getElementById("statecode").innerHTML=" Meghalaya";
+					t+=1;
+					continue;
+				}
+				if(state<=475 && state>=448)
+				{
+					document.getElementById("statecode").innerHTML=" Mizoram";
+					t+=1;
+					continue;
+				}
+				if(state<=503 && state>=476)
+				{
+					document.getElementById("statecode").innerHTML=" Nagaland";
+					t+=1;
+					continue;
+				}
+				if(state<=531 && state>=504)
+				{
+					document.getElementById("statecode").innerHTML=" Odisha";
+					t+=1;
+					continue;
+				}
+				if(state<=559 && state>=532)
+				{
+					document.getElementById("statecode").innerHTML=" Punjab";
+					t+=1;
+					continue;
+				}
+				if(state<=587 && state>=560)
+				{
+					document.getElementById("statecode").innerHTML=" Rajasthan";
+					t+=1;
+					continue;
+				}
+				if(state<=615 && state>=588)
+				{
+					document.getElementById("statecode").innerHTML=" Sikkim";
+					t+=1;
+					continue;
+				}
+				if(state<=643 && state>=616)
+				{
+					document.getElementById("statecode").innerHTML=" Tamil Nadu";
+					t+=1;
+					continue;
+				}
+				if(state<=671 && state>=644)
+				{
+					document.getElementById("statecode").innerHTML=" Telangana";
+					t+=1;
+					continue;
+				}
+				if(state<=699 && state>=672)
+				{
+					document.getElementById("statecode").innerHTML=" Tripura";
+					t+=1;
+					continue;
+				}
+				if(state<=727 && state>=700)
+				{
+					document.getElementById("statecode").innerHTML=" Uttar Pradesh";
+					t+=1;
+					continue;
+				}
+				if(state<=755 && state>=728)
+				{
+					document.getElementById("statecode").innerHTML=" Uttarakhand";
+					t+=1;
+					continue;
+				}
+				if(state<=783 && state>=756)
+				{
+					document.getElementById("statecode").innerHTML=" West Bengal";
+					t+=1;
+					continue;
+				}
+				if(state<=811 && state>=784)
+				{
+					document.getElementById("statecode").innerHTML=" Andaman and Nicobar Islands";
+					t+=1;
+					continue;
+				}
+				if(state<=839 && state>=812)
+				{
+					document.getElementById("statecode").innerHTML=" Chandigarh";
+					t+=1;
+					continue;
+				}
+				if(state<=867 && state>=840)
+				{
+					document.getElementById("statecode").innerHTML="Daman Diu";
+					t+=1;
+					continue;
+				}
+				if(state<=895 && state>=868)
+				{
+					document.getElementById("statecode").innerHTML=" Delhi";
+					continue;
+				}
+				if(state<=923 && state>=896)
+				{
+					document.getElementById("statecode").innerHTML=" Jammu and Kashmir";
+					t+=1;
+					continue;
+				}
+				if(state<=951 && state>=924)
+				{
+					document.getElementById("statecode").innerHTML=" Ladakh";
+					t+=1;
+					continue;
+				}
+				if(state<=979 && state>=952)
+				{
+					document.getElementById("statecode").innerHTML=" Lakshadweep";
+					t+=1;
+					continue;
+				}
+				if(state<=999 && state>=980)
+				{
+					document.getElementById("statecode").innerHTML=" Puducherry";
+					t+=1;
+					continue;
+				}
+				
+			}
+			
+		}
+		
+		
+		function generateOTP() {
+		          
+		    // Declare a digits variable 
+		    // which stores all digits
+		    var digits = '0123456789';
+		    let OTP = '';
+		    for (let i = 0; i < 4; i++ ) {
+		        OTP += digits[Math.floor(Math.random() * 10)];
+		    }
+		    localStorage.setItem("otp", OTP);
+		    
+		    return OTP;
+		    
+		}
+		generateOTP();
+		//document.write("OTP of 4 digits: ")
+		//document.write( generateOTP() );
+		//localStorage.clear();
+
+
+		
+	</script>
+	<form action="verification.html" onsubmit="return nameFunc()" method="GET">
+		<div>
+			<label>Name</label>
+			<input type="text" id="name" name="name" required>
+			<span id="name_message"> </span>
+		</div>
+
+		<div>
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email" oninput="emailFunc()"  value="" required>
+			<span id="email_message"> </span>
+		</div>
+
+		<div>
+			<label for="phone">Phone</label>
+			<input type="tel" id="phone" oninput="phoneFunc()" placeholder="(###) ### - ####" required pattern="\([0-9]{3}\) [0-9]{3} - [0-9]{4}" required>
+			<span id="phone_message"></span>
+			<span id="statecode"></span>	
+		</div>
+		<input type="submit" onsubmit="return generateOTP()" value="Submit">
+		<span id="otpshow"></span>
+	</form>
+
+
+</body>
+</html>
