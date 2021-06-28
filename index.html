@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial scale=1.0">
 	<link rel="stylesheet" href="styles.css">
-	<title>OTP Validation</title>
+	<title></title>
 </head>
 <body>
 	<script type="text/javascript">
@@ -87,239 +87,261 @@
 			}
 			
 			//Validating and finding correct Phone operator and printing them.
-			if(operator<=799 && operator>=621)
+			
+			if(operator>=621 && operator!=800)
 			{
-				document.getElementById("phone_message").innerHTML="Reliance Jio";
-		
-			}
-			if(operator<=920 && operator>=801)
-			{
-				document.getElementById("phone_message").innerHTML="Idea";
+				if(operator<=799 && operator>=621)
+				{
+					document.getElementById("phone_message").innerHTML="Reliance Jio,";
+				
+				}
+				if(operator<=920 && operator>=801)
+				{
+					document.getElementById("phone_message").innerHTML="Idea,";
+
+				}
+				if(operator<=999 && operator>=921)
+				{
+					document.getElementById("phone_message").innerHTML="Vodafone,";
+				}
 
 			}
-			if(operator<=999 && operator>=921)
+			else if((operator<=620 || operator==800) && operator.length>=3)
 			{
-				document.getElementById("phone_message").innerHTML="Vodafone";
+				alert("Invalid number");
+				document.getElementById('Form').reset();
+				return false;
+				//document.getElementById("phone").value='';
+				
 			}
+				
 
 			var t=0;//temp variable created for while loop.
-			while(t==0)
+			while(t==0 && state.length>2)
 			{
-				//validating and finding correct State and printing them
-				if(state<=27 && state>=0)
+				if(state==1)//validating and finding correct State and printing them
 				{
 					document.getElementById("statecode").innerHTML=" Andhra Pradesh";
 					t+=1;
 					continue;
 				}
-				if(state<=55 && state>=28)
+				if(state==2)
 				{
 					document.getElementById("statecode").innerHTML=" Arunachal Pradesh";
 					t+=1;
 					continue;
 				}
-				if(state<=83 && state>=56)
+				if(state==3)
 				{
 					document.getElementById("statecode").innerHTML=" Assam";
 					t+=1;
 					continue;
 				}
-				if(state<=111 && state>=84)
+				if(state==4)
 				{
 					document.getElementById("statecode").innerHTML=" Bihar";
 					t+=1;
 					continue;
 				}
-				if(state<=139 && state>=112)
+				if(state==5)
 				{
 					document.getElementById("statecode").innerHTML=" Chhattisgarh";
 					t+=1;
 					continue;
 				}
-				if(state<=167 && state>=140)
+				if(state==6)
 				{
 					document.getElementById("statecode").innerHTML=" Goa";
 					t+=1;
 					continue;
 				}
-				if(state<=195 && state>=168)
+				if(state==7)
 				{
 					document.getElementById("statecode").innerHTML=" Gujarat";
 					t+=1;
 					continue;
 				}
-				if(state<=223 && state>=196)
+				if(state==8)
 				{
 					document.getElementById("statecode").innerHTML=" Haryana";
 					t+=1;
 					continue;
 				}
-				if(state<=251 && state>=224)
+				if(state==9)
 				{
 					document.getElementById("statecode").innerHTML=" Himachal Pradesh";
 					t+=1;
 					continue;
 				}
-				if(state<=279 && state>=252)
+				if(state==10)
 				{
 					document.getElementById("statecode").innerHTML=" Jharkhand";
 					t+=1;
 					continue;
 				}
-				if(state<=307 && state>=280)
+				if(state==11)
 				{
 					document.getElementById("statecode").innerHTML=" Karnataka";
 					t+=1;
 					continue;
 				}
-				if(state<=335 && state>=308)
+				if(state==12)
 				{
 					document.getElementById("statecode").innerHTML=" Kerala";
 					t+=1;
 					continue;
-
 				}
-				if(state<=363 && state>=336)
+				if(state==13)
 				{
 					document.getElementById("statecode").innerHTML=" Madhya Pradesh";
 					t+=1;
 					continue;
 				}
-				if(state<=391 && state>=364)
+				if(state==14)
 				{
 					document.getElementById("statecode").innerHTML=" Maharashtra";
+					t+=1;
 					continue;
 				}
-				if(state<=419 && state>=392)
+				if(state==15)
 				{
 					document.getElementById("statecode").innerHTML=" Manipur";
 					t+=1;
 					continue;
 				}
-				if(state<=447 && state>=420)
+				if(state==16)
 				{
 					document.getElementById("statecode").innerHTML=" Meghalaya";
 					t+=1;
 					continue;
 				}
-				if(state<=475 && state>=448)
+				if(state==17)
 				{
 					document.getElementById("statecode").innerHTML=" Mizoram";
 					t+=1;
 					continue;
 				}
-				if(state<=503 && state>=476)
+				if(state==18)
 				{
 					document.getElementById("statecode").innerHTML=" Nagaland";
 					t+=1;
 					continue;
 				}
-				if(state<=531 && state>=504)
+				if(state==19)
 				{
 					document.getElementById("statecode").innerHTML=" Odisha";
 					t+=1;
 					continue;
 				}
-				if(state<=559 && state>=532)
+				if(state==20)
 				{
 					document.getElementById("statecode").innerHTML=" Punjab";
 					t+=1;
 					continue;
 				}
-				if(state<=587 && state>=560)
+				if(state==21)
 				{
 					document.getElementById("statecode").innerHTML=" Rajasthan";
 					t+=1;
 					continue;
 				}
-				if(state<=615 && state>=588)
+				if(state==22)
 				{
 					document.getElementById("statecode").innerHTML=" Sikkim";
 					t+=1;
 					continue;
 				}
-				if(state<=643 && state>=616)
+				if(state==23)
 				{
 					document.getElementById("statecode").innerHTML=" Tamil Nadu";
 					t+=1;
 					continue;
 				}
-				if(state<=671 && state>=644)
+				if(state==24)
 				{
 					document.getElementById("statecode").innerHTML=" Telangana";
 					t+=1;
 					continue;
 				}
-				if(state<=699 && state>=672)
+				if(state==25)
 				{
 					document.getElementById("statecode").innerHTML=" Tripura";
 					t+=1;
 					continue;
 				}
-				if(state<=727 && state>=700)
+				if(state==26)
 				{
 					document.getElementById("statecode").innerHTML=" Uttar Pradesh";
 					t+=1;
 					continue;
 				}
-				if(state<=755 && state>=728)
+				if(state==27)
 				{
 					document.getElementById("statecode").innerHTML=" Uttarakhand";
 					t+=1;
 					continue;
 				}
-				if(state<=783 && state>=756)
+				if(state==28)
 				{
 					document.getElementById("statecode").innerHTML=" West Bengal";
 					t+=1;
 					continue;
 				}
-				if(state<=811 && state>=784)
+				if(state==29)
 				{
 					document.getElementById("statecode").innerHTML=" Andaman and Nicobar Islands";
 					t+=1;
 					continue;
 				}
-				if(state<=839 && state>=812)
+				if(state==30)
 				{
 					document.getElementById("statecode").innerHTML=" Chandigarh";
 					t+=1;
-					continue;
+				continue;
 				}
-				if(state<=867 && state>=840)
+				if(state==31)
 				{
 					document.getElementById("statecode").innerHTML="Daman Diu";
 					t+=1;
 					continue;
 				}
-				if(state<=895 && state>=868)
+				if(state==32)
 				{
 					document.getElementById("statecode").innerHTML=" Delhi";
+					t+=1;
 					continue;
 				}
-				if(state<=923 && state>=896)
+				if(state==33)
 				{
 					document.getElementById("statecode").innerHTML=" Jammu and Kashmir";
 					t+=1;
 					continue;
 				}
-				if(state<=951 && state>=924)
+				if(state==34)
 				{
 					document.getElementById("statecode").innerHTML=" Ladakh";
 					t+=1;
 					continue;
 				}
-				if(state<=979 && state>=952)
+				if(state==35)
 				{
 					document.getElementById("statecode").innerHTML=" Lakshadweep";
 					t+=1;
 					continue;
 				}
-				if(state<=999 && state>=980)
+				if(state==36)
 				{
 					document.getElementById("statecode").innerHTML=" Puducherry";
 					t+=1;
 					continue;
+				}
+				else if(t==0)
+				{
+					alert("Invalid number");
+					document.getElementById('Form').reset();
+					return false;
+					//document.getElementById("phone").value='';
+
 				}
 				
 			}
@@ -349,7 +371,8 @@
 
 		
 	</script>
-	<form action="verification.html" onsubmit="return nameFunc()" method="GET">
+	<form id="Form" action="verification.html" onsubmit="return nameFunc()" method="GET">
+		<div><label>The form will be reset completely if Phone Number is invalid!</label></div>
 		<div>
 			<label>Name</label>
 			<input type="text" id="name" name="name" required>
@@ -363,7 +386,7 @@
 		</div>
 
 		<div>
-			<label for="phone">Phone</label>
+			<label>Phone</label>
 			<input type="tel" id="phone" oninput="phoneFunc()" placeholder="(###) ### - ####" required pattern="\([0-9]{3}\) [0-9]{3} - [0-9]{4}" required>
 			<span id="phone_message"></span>
 			<span id="statecode"></span>	
