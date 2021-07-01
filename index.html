@@ -2,13 +2,19 @@
 <html lang="en>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial scale=1.0">
+		<meta name="viewport" content="width=device-width", initial scale="1.0">
 	<link rel="stylesheet" href="styles.css">
 	<title></title>
 </head>
 <body>
 	<script type="text/javascript">
-		//nameFunc validates input for name of the user.
+		//Defining statecodes for each state
+		var ranges=
+		{
+			'100':"Andhra Pradesh", '101':"Arunachal Pradesh", '102':"Assam", '103':"Meghalaya", '104':"Bihar", '105':"Chhattisgarh", '106':"Goa", '107':"Himachal Pradesh", '108':"Haryana",  '109':"Jharkhand", '110':"Karnataka", '111':"Madhya Pradesh", '112':"Maharashtra", '113':"Manipur", '114':"Gujarat", '115':"	Kerala", '116':"Mizoram", '117':"Nagaland", '118':"Odisha", '119':"Rajasthan", '120':"Sikkim", '121':"Tamil Nadu", '122':"Punjab", '123':"Telangana", '124':"Tripura", '125':"Uttar Pradesh", '126':"Uttarakhand", '127':"West Bengal", '128':"Andaman and Nicobar Islands", '129':"Chandigarh", '130':"Dadra & Nagar Haveli", '131':"Delhi", '132':"Jammu and Kashmir", '133':"Lakshadweep", '134':"Puducherry", '135':"Ladakh", '136':"Daman & Diu"
+		}
+		
+		//Name validation	
 		function nameFunc()
 		{
 			var name= document.getElementById("name").value;
@@ -36,6 +42,8 @@
 				return false;
 			}
 		}
+
+
 		//emailFunc used for validating email input.
 		function emailFunc()//not working properly.
 		{
@@ -53,6 +61,7 @@
 
 		}
 
+		//Phone validation
 		function phoneFunc() 
 		{
 			var inpField = document.getElementById("phone");
@@ -61,13 +70,17 @@
 			var l = inpField.value.length;
 			var key = event.inputType;
 
+
 			//creating operator substring and saved it to localStorage.
 			var operator=inputno.substring(1, 4);
 			localStorage.setItem("operator", operator);
 
+
 			//creating state substring and saved it to localStorage.
 			var state=inputno.substring(6, 9);
 			localStorage.setItem("state", state);
+			
+			
 
 			  //checking the inputs to add the required pattern.
 			switch (l) {
@@ -86,8 +99,8 @@
 
 			}
 			
-			//Validating and finding correct Phone operator and printing them.
-			
+			//Validating and finding correct Phone operator and printing them
+		
 			if(operator>=621 && operator!=800)
 			{
 				if(operator<=799 && operator>=621)
@@ -109,244 +122,39 @@
 			else if((operator<=620 || operator==800) && operator.length>=3)
 			{
 				alert("Invalid number");
-				document.getElementById('Form').reset();
+				document.getElementById('phone').value="";
 				return false;
 				//document.getElementById("phone").value='';
 				
 			}
-				
-
-			var t=0;//temp variable created for while loop.
-			while(t==0 && state.length>2)
+			
+			var token=0;//using token concept for the loop
+			while(token==0 && state.length>2)
 			{
-				if(state==1)//validating and finding correct State and printing them
+				if(state.length>2)
 				{
-					document.getElementById("statecode").innerHTML=" Andhra Pradesh";
-					t+=1;
-					continue;
+					document.getElementById("statecode").innerHTML=(ranges[state]);
+					if(ranges[state]!==undefined)
+					{
+						token+=1;
+						return true;
+					}
 				}
-				if(state==2)
+				if(token!=1)
 				{
-					document.getElementById("statecode").innerHTML=" Arunachal Pradesh";
-					t+=1;
-					continue;
-				}
-				if(state==3)
-				{
-					document.getElementById("statecode").innerHTML=" Assam";
-					t+=1;
-					continue;
-				}
-				if(state==4)
-				{
-					document.getElementById("statecode").innerHTML=" Bihar";
-					t+=1;
-					continue;
-				}
-				if(state==5)
-				{
-					document.getElementById("statecode").innerHTML=" Chhattisgarh";
-					t+=1;
-					continue;
-				}
-				if(state==6)
-				{
-					document.getElementById("statecode").innerHTML=" Goa";
-					t+=1;
-					continue;
-				}
-				if(state==7)
-				{
-					document.getElementById("statecode").innerHTML=" Gujarat";
-					t+=1;
-					continue;
-				}
-				if(state==8)
-				{
-					document.getElementById("statecode").innerHTML=" Haryana";
-					t+=1;
-					continue;
-				}
-				if(state==9)
-				{
-					document.getElementById("statecode").innerHTML=" Himachal Pradesh";
-					t+=1;
-					continue;
-				}
-				if(state==10)
-				{
-					document.getElementById("statecode").innerHTML=" Jharkhand";
-					t+=1;
-					continue;
-				}
-				if(state==11)
-				{
-					document.getElementById("statecode").innerHTML=" Karnataka";
-					t+=1;
-					continue;
-				}
-				if(state==12)
-				{
-					document.getElementById("statecode").innerHTML=" Kerala";
-					t+=1;
-					continue;
-				}
-				if(state==13)
-				{
-					document.getElementById("statecode").innerHTML=" Madhya Pradesh";
-					t+=1;
-					continue;
-				}
-				if(state==14)
-				{
-					document.getElementById("statecode").innerHTML=" Maharashtra";
-					t+=1;
-					continue;
-				}
-				if(state==15)
-				{
-					document.getElementById("statecode").innerHTML=" Manipur";
-					t+=1;
-					continue;
-				}
-				if(state==16)
-				{
-					document.getElementById("statecode").innerHTML=" Meghalaya";
-					t+=1;
-					continue;
-				}
-				if(state==17)
-				{
-					document.getElementById("statecode").innerHTML=" Mizoram";
-					t+=1;
-					continue;
-				}
-				if(state==18)
-				{
-					document.getElementById("statecode").innerHTML=" Nagaland";
-					t+=1;
-					continue;
-				}
-				if(state==19)
-				{
-					document.getElementById("statecode").innerHTML=" Odisha";
-					t+=1;
-					continue;
-				}
-				if(state==20)
-				{
-					document.getElementById("statecode").innerHTML=" Punjab";
-					t+=1;
-					continue;
-				}
-				if(state==21)
-				{
-					document.getElementById("statecode").innerHTML=" Rajasthan";
-					t+=1;
-					continue;
-				}
-				if(state==22)
-				{
-					document.getElementById("statecode").innerHTML=" Sikkim";
-					t+=1;
-					continue;
-				}
-				if(state==23)
-				{
-					document.getElementById("statecode").innerHTML=" Tamil Nadu";
-					t+=1;
-					continue;
-				}
-				if(state==24)
-				{
-					document.getElementById("statecode").innerHTML=" Telangana";
-					t+=1;
-					continue;
-				}
-				if(state==25)
-				{
-					document.getElementById("statecode").innerHTML=" Tripura";
-					t+=1;
-					continue;
-				}
-				if(state==26)
-				{
-					document.getElementById("statecode").innerHTML=" Uttar Pradesh";
-					t+=1;
-					continue;
-				}
-				if(state==27)
-				{
-					document.getElementById("statecode").innerHTML=" Uttarakhand";
-					t+=1;
-					continue;
-				}
-				if(state==28)
-				{
-					document.getElementById("statecode").innerHTML=" West Bengal";
-					t+=1;
-					continue;
-				}
-				if(state==29)
-				{
-					document.getElementById("statecode").innerHTML=" Andaman and Nicobar Islands";
-					t+=1;
-					continue;
-				}
-				if(state==30)
-				{
-					document.getElementById("statecode").innerHTML=" Chandigarh";
-					t+=1;
-				continue;
-				}
-				if(state==31)
-				{
-					document.getElementById("statecode").innerHTML="Daman Diu";
-					t+=1;
-					continue;
-				}
-				if(state==32)
-				{
-					document.getElementById("statecode").innerHTML=" Delhi";
-					t+=1;
-					continue;
-				}
-				if(state==33)
-				{
-					document.getElementById("statecode").innerHTML=" Jammu and Kashmir";
-					t+=1;
-					continue;
-				}
-				if(state==34)
-				{
-					document.getElementById("statecode").innerHTML=" Ladakh";
-					t+=1;
-					continue;
-				}
-				if(state==35)
-				{
-					document.getElementById("statecode").innerHTML=" Lakshadweep";
-					t+=1;
-					continue;
-				}
-				if(state==36)
-				{
-					document.getElementById("statecode").innerHTML=" Puducherry";
-					t+=1;
-					continue;
-				}
-				else if(t==0)
-				{
-					alert("Invalid number");
-					document.getElementById('Form').reset();
+					alert("Invalid state");
+					//document.getElementById('Form').reset();
+					document.getElementById('phone').value="";
 					return false;
-					//document.getElementById("phone").value='';
-
 				}
 				
+
 			}
 			
+			
+			
 		}
+		
 		
 		
 		function generateOTP() {
@@ -367,32 +175,39 @@
 		//document.write("OTP of 4 digits: ")
 		//document.write( generateOTP() );
 		//localStorage.clear();
+		function clear()
+		{
+			document.getElementById('phone').value="";
+		}
 
 
 		
 	</script>
 	<form id="Form" action="verification.html" onsubmit="return nameFunc()" method="GET">
-		<div><label>The form will be reset completely if Phone Number is invalid!</label></div>
+		<div><p><h1>OTP Form</h1></p></div>
 		<div>
+			<br>
 			<label>Name</label>
 			<input type="text" id="name" name="name" required>
 			<span id="name_message"> </span>
-		</div>
+			<br><br>
+		
 
-		<div>
 			<label for="email">Email</label>
 			<input type="email" id="email" name="email" oninput="emailFunc()"  value="" required>
 			<span id="email_message"> </span>
-		</div>
+			<br><br>
+		
 
-		<div>
 			<label>Phone</label>
 			<input type="tel" id="phone" oninput="phoneFunc()" placeholder="(###) ### - ####" required pattern="\([0-9]{3}\) [0-9]{3} - [0-9]{4}" required>
+			<br>
 			<span id="phone_message"></span>
 			<span id="statecode"></span>	
+			<br>
 		</div>
-		<input type="submit" onsubmit="return generateOTP()" value="Submit">
-		<span id="otpshow"></span>
+			<input type="submit" onsubmit="return generateOTP()" value="Submit">
+			<span id="otpshow"></span>
 	</form>
 
 
