@@ -38,3 +38,21 @@ input:invalid {
 body{
     color: darkcyan;
 }
+form
+{
+  text-align: center;
+}
+input[type=submit]
+{
+  text-align: center;
+  height: 45px;
+  width: 250px;
+}
+div
+{
+  text-align: center;
+}
+input[name="validate"]
+{
+  right: 20px;
+}
