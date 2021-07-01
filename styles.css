@@ -36,17 +36,18 @@ input:invalid {
     color: red;
 }
 body{
-    color: darkcyan;
+    color: darkolivegreen;
 }
 form
 {
-  text-align: center;
+  
 }
 input[type=submit]
 {
-  text-align: center;
+ 
   height: 45px;
-  width: 250px;
+  width: 280px;
+  background-color: deepskyblue;
 }
 div
 {
@@ -55,4 +56,35 @@ div
 input[name="validate"]
 {
   right: 20px;
+}
+.box
+{
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  width: 600px;
+  padding: 20px;
+  background-color: ghostwhite;
+  border: 2px solid #777;
+  vertical-align: middle;
+  transform: translate(0, 20%);
+
+
+  vertical-align: middle;
+}
+.heading
+{
+  margin: 0 auto;
+  padding: 20px;
+}
+.verification
+{
+  border: 2px solid #777;
+  margin: 0 auto;
+  width: 670px;
+  text-align: center;
+  position: relative;
+  vertical-align: middle;
+  transform: translate(0, 70%);
+  background-color: ghostwhite;
 }
