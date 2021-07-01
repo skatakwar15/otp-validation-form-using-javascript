@@ -7,16 +7,22 @@
 </head>
 <body>
 	<div id="write">
+		<br>
 		Dear <b><span id="name"></span></b>, thank you for your inquiry. <br>A 4 digit verification number has been sent to your phone number: <b><span id="mobile"></span></b>, <br>please enter in the following box and submit your confirmation:
 	</div>
-
-	<div>
+	<br><br>
+	<div id="divid">
 		<label for="otp">Enter the OTP</label>
 		<input type="text" id="inputotp" minlength="4" maxlength="4" name="inputotp" value="">
+		<br>
 		<span id="otp_error"></span>
+		<input type="submit" name="validate" onclick="otpcheck()" value="Validate">
+		<br>
+		<span id="invalid"></span>
+		<br>
+		<span id="refer"></span>
 	</div>
-	<input type="submit" onclick="otpcheck()" value="Validate">
-	<span id="invalid"></span>
+	
 	
 
 	<script type="text/javascript">
@@ -28,7 +34,8 @@
 		var generatedotp=localStorage.getItem("otp");
 		
 		alert("generated otp is: "+generatedotp);
-		document.write("correct otp for reference: "+generatedotp);
+		//document.write("correct otp for reference: "+generatedotp);
+		document.getElementById("refer").innerHTML=("correct otp for reference is: "+generatedotp);
 		
 		//created a variable 'wrong' with value 3 to cap unsuccessfull otp input events to 3 attempts only.
 		var wrong=3;
@@ -55,7 +62,7 @@
 				{
 					wrong=wrong-1;
 					document.getElementById("invalid").innerHTML="invalid otp, only " +wrong+ " of 3 attempts left. Please re-enter correct otp.";
-					document.getElementById("inputotp").reset();
+					document.getElementById('inputotp').value="";
 
 				}
 			}
