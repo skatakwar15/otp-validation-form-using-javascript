@@ -7,3 +7,5 @@
 6. Enter the correct otp and click Validate button(you get 3 attempts to enter correct otp).
 7. If the otp is continously wrong for 3 attempts, the page redirects to Pixel6 404 page.
 8. If the otp entered is correct, the page redirects to Pixel6 homepage.
+
+Code snippets can be found inside 'buffer.html'
