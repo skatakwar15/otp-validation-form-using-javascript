@@ -1,0 +1,414 @@
+//Only use code #1 with object#1, and code#2 with object#2
+
+//Object #1
+var ranges=
+{
+	'001':"AndhraPradesh", '002':"AndhraPradesh", '003':"AndhraPradesh", '004':"AndhraPradesh", '005':"AndhraPradesh", '006':"AndhraPradesh", '007':"AndhraPradesh", '008':"AndhraPradesh", '009':"AndhraPradesh", '010':"AndhraPradesh", '011':"AndhraPradesh", '012':"AndhraPradesh", '013':"AndhraPradesh", '014':"AndhraPradesh", '015':"AndhraPradesh", '016':"AndhraPradesh", '017':"AndhraPradesh", '018':"AndhraPradesh", '019':"AndhraPradesh", '020':"AndhraPradesh", '021':"AndhraPradesh", '022':"AndhraPradesh", '023':"AndhraPradesh", '024':"AndhraPradesh", '025':"AndhraPradesh", '026':"AndhraPradesh", '027':"AndhraPradesh", '028':"ArunachalPradesh", '029':"ArunachalPradesh", '030':"ArunachalPradesh", '031':"ArunachalPradesh", '032':"ArunachalPradesh", '033':"ArunachalPradesh", '034':"ArunachalPradesh", '035':"ArunachalPradesh", '036':"ArunachalPradesh", '037':"ArunachalPradesh", '038':"ArunachalPradesh", '039':"ArunachalPradesh", '040':"ArunachalPradesh", '041':"ArunachalPradesh", '042':"ArunachalPradesh", '043':"ArunachalPradesh", '044':"ArunachalPradesh", '045':"ArunachalPradesh", '046':"ArunachalPradesh", '047':"ArunachalPradesh", '048':"ArunachalPradesh", '049':"ArunachalPradesh", '050':"ArunachalPradesh", '051':"ArunachalPradesh", '052':"ArunachalPradesh", '053':"ArunachalPradesh", '054':"ArunachalPradesh", '055':"ArunachalPradesh", '056':"Assam", '057':"Assam", '058':"Assam", '059':"Assam", '060':"Assam", '061':"Assam", '062':"Assam", '063':"Assam", '064':"Assam", '065':"Assam", '066':"Assam", '067':"Assam", '068':"Assam", '069':"Assam", '070':"Assam", '071':"Assam", '072':"Assam", '073':"Assam", '074':"Assam", '075':"Assam", '076':"Assam", '077':"Assam", '078':"Assam", '079':"Assam", '080':"Assam", '081':"Assam", '082':"Assam", '083':"Assam", '084':"Meghalaya", '085':"Meghalaya", '086':"Meghalaya", '087':"Meghalaya", '088':"Meghalaya", '089':"Meghalaya", '090':"Meghalaya", '091':"Meghalaya", '092':"Meghalaya", '093':"Meghalaya", '094':"Meghalaya", '095':"Meghalaya", '096':"Meghalaya", '097':"Meghalaya", '098':"Meghalaya", '099':"Meghalaya", '100':"Meghalaya", '101':"Meghalaya", '102':"Meghalaya", '103':"Meghalaya", '104':"Meghalaya", '105':"Meghalaya", '106':"Meghalaya", '107':"Meghalaya", '108':"Meghalaya", '109':"Meghalaya", '110':"Meghalaya", '111':"Meghalaya", '112':"Bihar", '113':"Bihar", '114':"Bihar", '115':"Bihar", '116':"Bihar", '117':"Bihar", '118':"Bihar", '119':"Bihar", '120':"Bihar", '121':"Bihar", '122':"Bihar", '123':"Bihar", '124':"Bihar", '125':"Bihar", '126':"Bihar", '127':"Bihar", '128':"Bihar", '129':"Bihar", '130':"Bihar", '131':"Bihar", '132':"Bihar", '133':"Bihar", '134':"Bihar", '135':"Bihar", '136':"Bihar", '137':"Bihar", '138':"Bihar", '139':"Bihar", '140':"Chhattisgarh", '141':"Chhattisgarh", '142':"Chhattisgarh", '143':"Chhattisgarh", '144':"Chhattisgarh", '145':"Chhattisgarh", '146':"Chhattisgarh", '147':"Chhattisgarh", '148':"Chhattisgarh", '149':"Chhattisgarh", '150':"Chhattisgarh", '151':"Chhattisgarh", '152':"Chhattisgarh", '153':"Chhattisgarh", '154':"Chhattisgarh", '155':"Chhattisgarh", '156':"Chhattisgarh", '157':"Chhattisgarh", '158':"Chhattisgarh", '159':"Chhattisgarh", '160':"Chhattisgarh", '161':"Chhattisgarh", '162':"Chhattisgarh", '163':"Chhattisgarh", '164':"Chhattisgarh", '165':"Chhattisgarh", '166':"Chhattisgarh", '167':"Chhattisgarh", '168':"Goa", '169':"Goa", '170':"Goa", '171':"Goa", '172':"Goa", '173':"Goa", '174':"Goa", '175':"Goa", '176':"Goa", '177':"Goa", '178':"Goa", '179':"Goa", '180':"Goa", '181':"Goa", '182':"Goa", '183':"Goa", '184':"Goa", '185':"Goa", '186':"Goa", '187':"Goa", '188':"Goa", '189':"Goa", '190':"Goa", '191':"Goa", '192':"Goa", '193':"Goa", '194':"Goa", '195':"Goa", '196':"HimachalPradesh", '197':"HimachalPradesh", '198':"HimachalPradesh", '199':"HimachalPradesh", '200':"HimachalPradesh", '201':"HimachalPradesh", '202':"HimachalPradesh", '203':"HimachalPradesh", '204':"HimachalPradesh", '205':"HimachalPradesh", '206':"HimachalPradesh", '207':"HimachalPradesh", '208':"HimachalPradesh", '209':"HimachalPradesh", '210':"HimachalPradesh", '211':"HimachalPradesh", '212':"HimachalPradesh", '213':"HimachalPradesh", '214':"HimachalPradesh", '215':"HimachalPradesh", '216':"HimachalPradesh", '217':"HimachalPradesh", '218':"HimachalPradesh", '219':"HimachalPradesh", '220':"HimachalPradesh", '221':"HimachalPradesh", '222':"HimachalPradesh", '223':"HimachalPradesh", '224':"Haryana", '225':"Haryana", '226':"Haryana", '227':"Haryana", '228':"Haryana", '229':"Haryana", '230':"Haryana", '231':"Haryana", '232':"Haryana", '233':"Haryana", '234':"Haryana", '235':"Haryana", '236':"Haryana", '237':"Haryana", '238':"Haryana", '239':"Haryana", '240':"Haryana", '241':"Haryana", '242':"Haryana", '243':"Haryana", '244':"Haryana", '245':"Haryana", '246':"Haryana", '247':"Haryana", '248':"Haryana", '249':"Haryana", '250':"Haryana", '251':"Haryana", '252':"Jharkhand", '253':"Jharkhand", '254':"Jharkhand", '255':"Jharkhand", '256':"Jharkhand", '257':"Jharkhand", '258':"Jharkhand", '259':"Jharkhand", '260':"Jharkhand", '261':"Jharkhand", '262':"Jharkhand", '263':"Jharkhand", '264':"Jharkhand", '265':"Jharkhand", '266':"Jharkhand", '267':"Jharkhand", '268':"Jharkhand", '269':"Jharkhand", '270':"Jharkhand", '271':"Jharkhand", '272':"Jharkhand", '273':"Jharkhand", '274':"Jharkhand", '275':"Jharkhand", '276':"Jharkhand", '277':"Jharkhand", '278':"Jharkhand", '279':"Jharkhand", '280':"Karnataka", '281':"Karnataka", '282':"Karnataka", '283':"Karnataka", '284':"Karnataka", '285':"Karnataka", '286':"Karnataka", '287':"Karnataka", '288':"Karnataka", '289':"Karnataka", '290':"Karnataka", '291':"Karnataka", '292':"Karnataka", '293':"Karnataka", '294':"Karnataka", '295':"Karnataka", '296':"Karnataka", '297':"Karnataka", '298':"Karnataka", '299':"Karnataka", '300':"Karnataka", '301':"Karnataka", '302':"Karnataka", '303':"Karnataka", '304':"Karnataka", '305':"Karnataka", '306':"Karnataka", '307':"Karnataka", '308':"MadhyaPradesh", '309':"MadhyaPradesh", '310':"MadhyaPradesh", '311':"MadhyaPradesh", '312':"MadhyaPradesh", '313':"MadhyaPradesh", '314':"MadhyaPradesh", '315':"MadhyaPradesh", '316':"MadhyaPradesh", '317':"MadhyaPradesh", '318':"MadhyaPradesh", '319':"MadhyaPradesh", '320':"MadhyaPradesh", '321':"MadhyaPradesh", '322':"MadhyaPradesh", '323':"MadhyaPradesh", '324':"MadhyaPradesh", '325':"MadhyaPradesh", '326':"MadhyaPradesh", '327':"MadhyaPradesh", '328':"MadhyaPradesh", '329':"MadhyaPradesh", '330':"MadhyaPradesh", '331':"MadhyaPradesh", '332':"MadhyaPradesh", '333':"MadhyaPradesh", '334':"MadhyaPradesh", '335':"MadhyaPradesh", '336':"Maharashtra", '337':"Maharashtra", '338':"Maharashtra", '339':"Maharashtra", '340':"Maharashtra", '341':"Maharashtra", '342':"Maharashtra", '343':"Maharashtra", '344':"Maharashtra", '345':"Maharashtra", '346':"Maharashtra", '347':"Maharashtra", '348':"Maharashtra", '349':"Maharashtra", '350':"Maharashtra", '351':"Maharashtra", '352':"Maharashtra", '353':"Maharashtra", '354':"Maharashtra", '355':"Maharashtra", '356':"Maharashtra", '357':"Maharashtra", '358':"Maharashtra", '359':"Maharashtra", '360':"Maharashtra", '361':"Maharashtra", '362':"Maharashtra", '363':"Maharashtra", '364':"Manipur", '365':"Manipur", '366':"Manipur", '367':"Manipur", '368':"Manipur", '369':"Manipur", '370':"Manipur", '371':"Manipur", '372':"Manipur", '373':"Manipur", '374':"Manipur", '375':"Manipur", '376':"Manipur", '377':"Manipur", '378':"Manipur", '379':"Manipur", '380':"Manipur", '381':"Manipur", '382':"Manipur", '383':"Manipur", '384':"Manipur", '385':"Manipur", '386':"Manipur", '387':"Manipur", '388':"Manipur", '389':"Manipur", '390':"Manipur", '391':"Manipur", '392':"Gujarat", '393':"Gujarat", '394':"Gujarat", '395':"Gujarat", '396':"Gujarat", '397':"Gujarat", '398':"Gujarat", '399':"Gujarat", '400':"Gujarat", '401':"Gujarat", '402':"Gujarat", '403':"Gujarat", '404':"Gujarat", '405':"Gujarat", '406':"Gujarat", '407':"Gujarat", '408':"Gujarat", '409':"Gujarat", '410':"Gujarat", '411':"Gujarat", '412':"Gujarat", '413':"Gujarat", '414':"Gujarat", '415':"Gujarat", '416':"Gujarat", '417':"Gujarat", '418':"Gujarat", '419':"Gujarat", '420':"Kerala", '421':"Kerala", '422':"Kerala", '423':"Kerala", '424':"Kerala", '425':"Kerala", '426':"Kerala", '427':"Kerala", '428':"Kerala", '429':"Kerala", '430':"Kerala", '431':"Kerala", '432':"Kerala", '433':"Kerala", '434':"Kerala", '435':"Kerala", '436':"Kerala", '437':"Kerala", '438':"Kerala", '439':"Kerala", '440':"Kerala", '441':"Kerala", '442':"Kerala", '443':"Kerala", '444':"Kerala", '445':"Kerala", '446':"Kerala", '447':"Kerala", '448':"Mizoram", '449':"Mizoram", '450':"Mizoram", '451':"Mizoram", '452':"Mizoram", '453':"Mizoram", '454':"Mizoram", '455':"Mizoram", '456':"Mizoram", '457':"Mizoram", '458':"Mizoram", '459':"Mizoram", '460':"Mizoram", '461':"Mizoram", '462':"Mizoram", '463':"Mizoram", '464':"Mizoram", '465':"Mizoram", '466':"Mizoram", '467':"Mizoram", '468':"Mizoram", '469':"Mizoram", '470':"Mizoram", '471':"Mizoram", '472':"Mizoram", '473':"Mizoram", '474':"Mizoram", '475':"Mizoram", '476':"Nagaland", '477':"Nagaland", '478':"Nagaland", '479':"Nagaland", '480':"Nagaland", '481':"Nagaland", '482':"Nagaland", '483':"Nagaland", '484':"Nagaland", '485':"Nagaland", '486':"Nagaland", '487':"Nagaland", '488':"Nagaland", '489':"Nagaland", '490':"Nagaland", '491':"Nagaland", '492':"Nagaland", '493':"Nagaland", '494':"Nagaland", '495':"Nagaland", '496':"Nagaland", '497':"Nagaland", '498':"Nagaland", '499':"Nagaland", '500':"Nagaland", '501':"Nagaland", '502':"Nagaland", '503':"Nagaland", '504':"Odisha", '505':"Odisha", '506':"Odisha", '507':"Odisha", '508':"Odisha", '509':"Odisha", '510':"Odisha", '511':"Odisha", '512':"Odisha", '513':"Odisha", '514':"Odisha", '515':"Odisha", '516':"Odisha", '517':"Odisha", '518':"Odisha", '519':"Odisha", '520':"Odisha", '521':"Odisha", '522':"Odisha", '523':"Odisha", '524':"Odisha", '525':"Odisha", '526':"Odisha", '527':"Odisha", '528':"Odisha", '529':"Odisha", '530':"Odisha", '531':"Odisha", '532':"Rajasthan", '533':"Rajasthan", '534':"Rajasthan", '535':"Rajasthan", '536':"Rajasthan", '537':"Rajasthan", '538':"Rajasthan", '539':"Rajasthan", '540':"Rajasthan", '541':"Rajasthan", '542':"Rajasthan", '543':"Rajasthan", '544':"Rajasthan", '545':"Rajasthan", '546':"Rajasthan", '547':"Rajasthan", '548':"Rajasthan", '549':"Rajasthan", '550':"Rajasthan", '551':"Rajasthan", '552':"Rajasthan", '553':"Rajasthan", '554':"Rajasthan", '555':"Rajasthan", '556':"Rajasthan", '557':"Rajasthan", '558':"Rajasthan", '559':"Rajasthan", '560':"Sikkim", '561':"Sikkim", '562':"Sikkim", '563':"Sikkim", '564':"Sikkim", '565':"Sikkim", '566':"Sikkim", '567':"Sikkim", '568':"Sikkim", '569':"Sikkim", '570':"Sikkim", '571':"Sikkim", '572':"Sikkim", '573':"Sikkim", '574':"Sikkim", '575':"Sikkim", '576':"Sikkim", '577':"Sikkim", '578':"Sikkim", '579':"Sikkim", '580':"Sikkim", '581':"Sikkim", '582':"Sikkim", '583':"Sikkim", '584':"Sikkim", '585':"Sikkim", '586':"Sikkim", '587':"Sikkim", '588':"TamilNadu", '589':"TamilNadu", '590':"TamilNadu", '591':"TamilNadu", '592':"TamilNadu", '593':"TamilNadu", '594':"TamilNadu", '595':"TamilNadu", '596':"TamilNadu", '597':"TamilNadu", '598':"TamilNadu", '599':"TamilNadu", '600':"TamilNadu", '601':"TamilNadu", '602':"TamilNadu", '603':"TamilNadu", '604':"TamilNadu", '605':"TamilNadu", '606':"TamilNadu", '607':"TamilNadu", '608':"TamilNadu", '609':"TamilNadu", '610':"TamilNadu", '611':"TamilNadu", '612':"TamilNadu", '613':"TamilNadu", '614':"TamilNadu", '615':"TamilNadu", '616':"Punjab", '617':"Punjab", '618':"Punjab", '619':"Punjab", '620':"Punjab", '621':"Punjab", '622':"Punjab", '623':"Punjab", '624':"Punjab", '625':"Punjab", '626':"Punjab", '627':"Punjab", '628':"Punjab", '629':"Punjab", '630':"Punjab", '631':"Punjab", '632':"Punjab", '633':"Punjab", '634':"Punjab", '635':"Punjab", '636':"Punjab", '637':"Punjab", '638':"Punjab", '639':"Punjab", '640':"Punjab", '641':"Punjab", '642':"Punjab", '643':"Punjab", '644':"Telangana", '645':"Telangana", '646':"Telangana", '647':"Telangana", '648':"Telangana", '649':"Telangana", '650':"Telangana", '651':"Telangana", '652':"Telangana", '653':"Telangana", '654':"Telangana", '655':"Telangana", '656':"Telangana", '657':"Telangana", '658':"Telangana", '659':"Telangana", '660':"Telangana", '661':"Telangana", '662':"Telangana", '663':"Telangana", '664':"Telangana", '665':"Telangana", '666':"Telangana", '667':"Telangana", '668':"Telangana", '669':"Telangana", '670':"Telangana", '671':"Telangana", '672':"Tripura", '673':"Tripura", '674':"Tripura", '675':"Tripura", '676':"Tripura", '677':"Tripura", '678':"Tripura", '679':"Tripura", '680':"Tripura", '681':"Tripura", '682':"Tripura", '683':"Tripura", '684':"Tripura", '685':"Tripura", '686':"Tripura", '687':"Tripura", '688':"Tripura", '689':"Tripura", '690':"Tripura", '691':"Tripura", '692':"Tripura", '693':"Tripura", '694':"Tripura", '695':"Tripura", '696':"Tripura", '697':"Tripura", '698':"Tripura", '699':"Tripura", '700':"UttarPradesh", '701':"UttarPradesh", '702':"UttarPradesh", '703':"UttarPradesh", '704':"UttarPradesh", '705':"UttarPradesh", '706':"UttarPradesh", '707':"UttarPradesh", '708':"UttarPradesh", '709':"UttarPradesh", '710':"UttarPradesh", '711':"UttarPradesh", '712':"UttarPradesh", '713':"UttarPradesh", '714':"UttarPradesh", '715':"UttarPradesh", '716':"UttarPradesh", '717':"UttarPradesh", '718':"UttarPradesh", '719':"UttarPradesh", '720':"UttarPradesh", '721':"UttarPradesh", '722':"UttarPradesh", '723':"UttarPradesh", '724':"UttarPradesh", '725':"UttarPradesh", '726':"UttarPradesh", '727':"UttarPradesh", '728':"Uttarakhand", '729':"Uttarakhand", '730':"Uttarakhand", '731':"Uttarakhand", '732':"Uttarakhand", '733':"Uttarakhand", '734':"Uttarakhand", '735':"Uttarakhand", '736':"Uttarakhand", '737':"Uttarakhand", '738':"Uttarakhand", '739':"Uttarakhand", '740':"Uttarakhand", '741':"Uttarakhand", '742':"Uttarakhand", '743':"Uttarakhand", '744':"Uttarakhand", '745':"Uttarakhand", '746':"Uttarakhand", '747':"Uttarakhand", '748':"Uttarakhand", '749':"Uttarakhand", '750':"Uttarakhand", '751':"Uttarakhand", '752':"Uttarakhand", '753':"Uttarakhand", '754':"Uttarakhand", '755':"Uttarakhand", '756':"WestBengal", '757':"WestBengal", '758':"WestBengal", '759':"WestBengal", '760':"WestBengal", '761':"WestBengal", '762':"WestBengal", '763':"WestBengal", '764':"WestBengal", '765':"WestBengal", '766':"WestBengal", '767':"WestBengal", '768':"WestBengal", '769':"WestBengal", '770':"WestBengal", '771':"WestBengal", '772':"WestBengal", '773':"WestBengal", '774':"WestBengal", '775':"WestBengal", '776':"WestBengal", '777':"WestBengal", '778':"WestBengal", '779':"WestBengal", '780':"WestBengal", '781':"WestBengal", '782':"WestBengal", '783':"WestBengal", '784':"AndamanandNicobarIslands", '785':"AndamanandNicobarIslands", '786':"AndamanandNicobarIslands", '787':"AndamanandNicobarIslands", '788':"AndamanandNicobarIslands", '789':"AndamanandNicobarIslands", '790':"AndamanandNicobarIslands", '791':"AndamanandNicobarIslands", '792':"AndamanandNicobarIslands", '793':"AndamanandNicobarIslands", '794':"AndamanandNicobarIslands", '795':"AndamanandNicobarIslands", '796':"AndamanandNicobarIslands", '797':"AndamanandNicobarIslands", '798':"AndamanandNicobarIslands", '799':"AndamanandNicobarIslands", '800':"AndamanandNicobarIslands", '801':"AndamanandNicobarIslands", '802':"AndamanandNicobarIslands", '803':"AndamanandNicobarIslands", '804':"AndamanandNicobarIslands", '805':"AndamanandNicobarIslands", '806':"AndamanandNicobarIslands", '807':"AndamanandNicobarIslands", '808':"AndamanandNicobarIslands", '809':"AndamanandNicobarIslands", '810':"AndamanandNicobarIslands", '811':"AndamanandNicobarIslands", '812':"Chandigarh", '813':"Chandigarh", '814':"Chandigarh", '815':"Chandigarh", '816':"Chandigarh", '817':"Chandigarh", '818':"Chandigarh", '819':"Chandigarh", '820':"Chandigarh", '821':"Chandigarh", '822':"Chandigarh", '823':"Chandigarh", '824':"Chandigarh", '825':"Chandigarh", '826':"Chandigarh", '827':"Chandigarh", '828':"Chandigarh", '829':"Chandigarh", '830':"Chandigarh", '831':"Chandigarh", '832':"Chandigarh", '833':"Chandigarh", '834':"Chandigarh", '835':"Chandigarh", '836':"Chandigarh", '837':"Chandigarh", '838':"Chandigarh", '839':"Chandigarh", '840':"Dadra&NagarHaveli", '841':"Dadra&NagarHaveli", '842':"Dadra&NagarHaveli", '843':"Dadra&NagarHaveli", '844':"Dadra&NagarHaveli", '845':"Dadra&NagarHaveli", '846':"Dadra&NagarHaveli", '847':"Dadra&NagarHaveli", '848':"Dadra&NagarHaveli", '849':"Dadra&NagarHaveli", '850':"Dadra&NagarHaveli", '851':"Dadra&NagarHaveli", '852':"Dadra&NagarHaveli", '853':"Dadra&NagarHaveli", '854':"Dadra&NagarHaveli", '855':"Dadra&NagarHaveli", '856':"Dadra&NagarHaveli", '857':"Dadra&NagarHaveli", '858':"Dadra&NagarHaveli", '859':"Dadra&NagarHaveli", '860':"Dadra&NagarHaveli", '861':"Dadra&NagarHaveli", '862':"Dadra&NagarHaveli", '863':"Dadra&NagarHaveli", '864':"Dadra&NagarHaveli", '865':"Dadra&NagarHaveli", '866':"Dadra&NagarHaveli", '867':"Dadra&NagarHaveli", '868':"Delhi", '869':"Delhi", '870':"Delhi", '871':"Delhi", '872':"Delhi", '873':"Delhi", '874':"Delhi", '875':"Delhi", '876':"Delhi", '877':"Delhi", '878':"Delhi", '879':"Delhi", '880':"Delhi", '881':"Delhi", '882':"Delhi", '883':"Delhi", '884':"Delhi", '885':"Delhi", '886':"Delhi", '887':"Delhi", '888':"Delhi", '889':"Delhi", '890':"Delhi", '891':"Delhi", '892':"Delhi", '893':"Delhi", '894':"Delhi", '895':"Delhi", '896':"JammuandKashmir", '897':"JammuandKashmir", '898':"JammuandKashmir", '899':"JammuandKashmir", '900':"JammuandKashmir", '901':"JammuandKashmir", '902':"JammuandKashmir", '903':"JammuandKashmir", '904':"JammuandKashmir", '905':"JammuandKashmir", '906':"JammuandKashmir", '907':"JammuandKashmir", '908':"JammuandKashmir", '909':"JammuandKashmir", '910':"JammuandKashmir", '911':"JammuandKashmir", '912':"JammuandKashmir", '913':"JammuandKashmir", '914':"JammuandKashmir", '915':"JammuandKashmir", '916':"JammuandKashmir", '917':"JammuandKashmir", '918':"JammuandKashmir", '919':"JammuandKashmir", '920':"JammuandKashmir", '921':"JammuandKashmir", '922':"JammuandKashmir", '923':"JammuandKashmir", '924':"Lakshadweep", '925':"Lakshadweep", '926':"Lakshadweep", '927':"Lakshadweep", '928':"Lakshadweep", '929':"Lakshadweep", '930':"Lakshadweep", '931':"Lakshadweep", '932':"Lakshadweep", '933':"Lakshadweep", '934':"Lakshadweep", '935':"Lakshadweep", '936':"Lakshadweep", '937':"Lakshadweep", '938':"Lakshadweep", '939':"Lakshadweep", '940':"Lakshadweep", '941':"Lakshadweep", '942':"Lakshadweep", '943':"Lakshadweep", '944':"Lakshadweep", '945':"Lakshadweep", '946':"Lakshadweep", '947':"Lakshadweep", '948':"Lakshadweep", '949':"Lakshadweep", '950':"Lakshadweep", '951':"Lakshadweep", '952':"Puducherry", '953':"Puducherry", '954':"Puducherry", '955':"Puducherry", '956':"Puducherry", '957':"Puducherry", '958':"Puducherry", '959':"Puducherry", '960':"Puducherry", '961':"Puducherry", '962':"Puducherry", '963':"Puducherry", '964':"Puducherry", '965':"Puducherry", '966':"Puducherry", '967':"Puducherry", '968':"Puducherry", '969':"Puducherry", '970':"Puducherry", '971':"Puducherry", '972':"Puducherry", '973':"Puducherry", '974':"Puducherry", '975':"Puducherry", '976':"Puducherry", '977':"Puducherry", '978':"Puducherry", '979':"Puducherry", '980':"Daman&Diu", '981':"Daman&Diu", '982':"Daman&Diu", '983':"Daman&Diu", '984':"Daman&Diu", '985':"Daman&Diu", '986':"Daman&Diu", '987':"Daman&Diu", '988':"Daman&Diu", '989':"Daman&Diu", '990':"Daman&Diu", '991':"Daman&Diu", '992':"Daman&Diu", '993':"Daman&Diu", '994':"Daman&Diu", '995':"Daman&Diu", '996':"Daman&Diu", '997':"Daman&Diu", '998':"Daman&Diu", '999':"Daman&Diu"
+}
+//object #2
+var ranges=
+{
+	'1':"Andhra Pradesh", '101':"Arunachal Pradesh", '102':"Assam", '103':"Meghalaya", '104':"Bihar", '105':"Chhattisgarh", '106':"Goa", '107':"Himachal Pradesh", '108':"Haryana",  '109':"Jharkhand", '110':"Karnataka", '111':"Madhya Pradesh", '112':"Maharashtra", '113':"Manipur", '114':"Gujarat", '115':"	Kerala", '116':"Mizoram", '117':"Nagaland", '118':"Odisha", '119':"Rajasthan", '120':"Sikkim", '121':"Tamil Nadu", '122':"Punjab", '123':"Telangana", '124':"Tripura", '125':"Uttar Pradesh", '126':"Uttarakhand", '127':"West Bengal", '128':"Andaman and Nicobar Islands", '129':"Chandigarh", '130':"Dadra & Nagar Haveli", '131':"Delhi", '132':"Jammu and Kashmir", '133':"Lakshadweep", '134':"Puducherry", '135':"Ladakh", '136':"Daman & Diu"
+}
+
+
+
+------------------------------------------------------------------
+
+//state finder code
+//code #1
+while(token==0 && state.length>2)
+{
+	if(state.length>2)
+	{
+		document.getElementById("statecode").innerHTML=(ranges[state]);
+		if(ranges[state]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(token!=1)
+	{
+		alert("Invalid state");
+		//document.getElementById('Form').reset();
+		document.getElementById('phone').value="";
+		return false;
+	}
+}
+
+//code #2
+while(token==0 && state.length>2)
+{
+	if(state>=0 && state<=27)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[100]);
+		if(ranges[100]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=28 && state<=55)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[101]);
+		if(ranges[101]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=56 && state<=83)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[102]);
+		if(ranges[102]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=84 && state<=111)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[103]);
+		if(ranges[103]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=112 && state<=139)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[104]);
+		if(ranges[104]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=140 && state<=167)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[105]);
+		if(ranges[105]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=168 && state<=195)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[106]);
+		if(ranges[106]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=196 && state<=223)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[107]);
+		if(ranges[107]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=224 && state<=251)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[108]);
+		if(ranges[108]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=252 && state<=279)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[109]);
+		if(ranges[109]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=280 && state<=307)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[110]);
+		if(ranges[110]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=308 && state<=335)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[111]);
+		if(ranges[111]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=336 && state<=363)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[112]);
+		if(ranges[112]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=364 && state<=391)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[113]);
+		if(ranges[113]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=392 && state<=419)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[114]);
+		if(ranges[114]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=420 && state<=447)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[115]);
+		if(ranges[115]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=448 && state<=475)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[116]);
+		if(ranges[116]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=476 && state<=503)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[117]);
+		if(ranges[117]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=504 && state<=531)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[118]);
+		if(ranges[118]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=532 && state<=559)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[119]);
+		if(ranges[119]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=560 && state<=587)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[120]);
+		if(ranges[120]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=588 && state<=615)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[121]);
+		if(ranges[121]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=616 && state<=643)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[122]);
+		if(ranges[122]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=644 && state<=671)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[123]);
+		if(ranges[123]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=672 && state<=699)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[124]);
+		if(ranges[124]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=700 && state<=727)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[125]);
+		if(ranges[125]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=728 && state<=755)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[126]);
+		if(ranges[126]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=756 && state<=783)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[127]);
+		if(ranges[127]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=784 && state<=811)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[128]);
+		if(ranges[128]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=812 && state<=839)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[129]);
+		if(ranges[129]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=840 && state<=867)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[130]);
+		if(ranges[130]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=868 && state<=895)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[131]);
+		if(ranges[131]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=896 && state<=923)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[132]);
+		if(ranges[132]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=924 && state<=951)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[134]);
+		if(ranges[134]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=952 && state<=979)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[135]);
+		if(ranges[135]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+	if(state>=980 && state<=999)
+	{
+		//document.getElementById("statecode").innerHTML=(ranges[state]);
+		document.getElementById("statecode").innerHTML=(ranges[136]);
+		if(ranges[136]!==undefined)
+		{
+			token+=1;
+			return true;
+		}
+	}
+
+	if(token!=1)
+	{
+		alert("Invalid state");
+		//document.getElementById('Form').reset();
+		document.getElementById('phone').value="";
+		return false;
+	}
+	
+
+}
+
